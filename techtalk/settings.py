@@ -39,8 +39,20 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # local apps - NEW !
     'rest_framework',
+    'rest_framework.authtoken',  # This for authentication with Token
     'library.apps.LibraryConfig',  # This is how local apps should be embedded now since django 3.2
+    'drf_spectacular',
 ]
+
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "rest_framework.authentication.TokenAuthentication",
+        "rest_framework.authentication.BasicAuthentication",
+        "rest_framework.authentication.SessionAuthentication",
+    ],
+    # the next one is important to use drf_spectacular
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

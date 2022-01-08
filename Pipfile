@@ -11,6 +11,7 @@ django-filter = "*"
 black = "*"
 pylint = "*"
 pylint-django = "*"
+drf-spectacular = "*"
 
 [dev-packages]
 
