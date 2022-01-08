@@ -7,6 +7,7 @@ class BookSerializer(serializers.ModelSerializer):
     class Meta:
         model = Book
         fields = [
+            "pk",  # this allows us to identify the book later
             "title",
             "num_pages",
             "published_date",
