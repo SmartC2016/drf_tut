@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # local apps - NEW !
+    'rest_framework',
+    'library.apps.LibraryConfig',  # This is how local apps should be embedded now since django 3.2
 ]
 
 MIDDLEWARE = [
